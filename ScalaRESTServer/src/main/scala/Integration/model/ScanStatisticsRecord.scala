@@ -1,3 +1,3 @@
 package Integration.model
 
-case class ScanStatistics()
+case class ScanStatisticsRecord(name: String, count: Int)

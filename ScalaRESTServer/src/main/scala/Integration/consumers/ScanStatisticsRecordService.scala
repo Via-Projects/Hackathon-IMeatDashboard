@@ -1,12 +1,22 @@
-package Integration.services
+package Integration.consumers
 
-import Integration.consumers.IScanService
+import Integration.model.ScanStatisticsRecord
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
-@Singleton
-class ScanStatisticsRecordService(@Autowired val scansService: IScanService) extends IScanStatisticsRecordService {
+@Service
+class ScanStatisticsRecordService() extends IScanStatisticsRecordService {
 
-  def getScanStatisticsRecords(number: Int):Map[String,Int] = {
-    scansService.getScans.groupBy(_.productName).view.mapValues(_.size).toMap
+  @Autowired var scansService: IScanService = _
+
+  def getScanStatisticsRecords: Seq[ScanStatisticsRecord] = {
+    scansService.getScans
+      .groupBy(scan => scan.productName)
+      .view
+      .mapValues(_.length)
+      .toList
+      .map {
+        case (k, v) => ScanStatisticsRecord(k, v)
+      }
   }
 }

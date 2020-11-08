@@ -2,6 +2,6 @@ package Integration.consumers
 
 import Integration.model.Scan
 
-trait IScanConsumer {
-    def getScans: List[Scan]
+trait IScanService {
+    def getScans: Array[Scan]
 }

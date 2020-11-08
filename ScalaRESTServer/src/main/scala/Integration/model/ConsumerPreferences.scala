@@ -1,3 +1,3 @@
 package Integration.model
 
-case class ConsumerPreferences()
+case class ConsumerPreferences(val name: String, val percentage: Double)

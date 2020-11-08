@@ -1,5 +1,7 @@
 package Integration.consumers
 
-trait IScanStatisticsRecordService {
+import Integration.model.ScanStatisticsRecord
 
+trait IScanStatisticsRecordService {
+  def getScanStatisticsRecords: Seq[ScanStatisticsRecord]
 }

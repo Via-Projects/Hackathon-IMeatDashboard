@@ -1,5 +1,6 @@
-package Integration.consumers
+package Integration.contollers
 
+import Integration.consumers.IScanStatisticsRecordService
 import com.google.gson.Gson
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.{HttpStatus, ResponseEntity}
@@ -15,7 +16,7 @@ class ScanStatisticsController() {
 
   @GetMapping(path = Array("/scanStatistics"), produces = Array("application/json"))
   def getScans: ResponseEntity[String] = {
-    ResponseEntity.status(HttpStatus.OK).body(gson.toJson(service.getScanStatisticsRecords(10)))
+    ResponseEntity.status(HttpStatus.OK).body(gson.toJson(service.getScanStatisticsRecords.toArray))
   }
 
 }
