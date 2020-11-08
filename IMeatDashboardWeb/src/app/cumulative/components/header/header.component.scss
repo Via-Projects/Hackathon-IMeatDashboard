@@ -3,3 +3,37 @@ img {
   width: 20%;
   margin-left: -3%;
 }
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-right: 0.4%;
+}
+
+.menu li {
+  float: left;
+  list-style-type: none;
+}
+
+.menu li {
+  font-size: 15px;
+  display: block;
+  list-style-type: none;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+.menu b {
+  cursor: pointer;
+}
+
+.menu li:hover {
+  color: rgb(24, 46, 123);
+}
+.separator {
+  flex: 1 1 auto;
+}

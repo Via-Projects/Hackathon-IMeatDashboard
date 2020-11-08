@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WrapComponent } from './wrap.component';
+import { UserPrefferedDataComponent } from './user-preffered-data.component';
 
-describe('WrapComponent', () => {
-  let component: WrapComponent;
-  let fixture: ComponentFixture<WrapComponent>;
+describe('UserPrefferedDataComponent', () => {
+  let component: UserPrefferedDataComponent;
+  let fixture: ComponentFixture<UserPrefferedDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WrapComponent ]
+      declarations: [ UserPrefferedDataComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WrapComponent);
+    fixture = TestBed.createComponent(UserPrefferedDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
